@@ -1,0 +1,240 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: Arial, sans-serif;
+	color: #111;
+	line-height: 1.6;
+}
+
+header {
+	position: sticky;
+	top: 0;
+	background: #fff;
+	z-index: 10;
+	border-bottom: 1px solid #eee;
+}
+
+nav {
+	max-width: 1150px;
+	margin: auto;
+	padding: 17px 25px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 20px;
+}
+
+h1 {
+	font-size: 23px;
+	letter-spacing: 2px;
+}
+
+h1 span {
+	font-weight: 400;
+}
+
+.links {
+	display: flex;
+	gap: 24px;
+}
+
+.links a,
+.cart {
+	color: #111;
+	text-decoration: none;
+}
+
+.btn {
+	display: inline-block;
+	background: #111;
+	color: #fff;
+	text-decoration: none;
+	padding: 12px 23px;
+	font-weight: bold;
+	border-radius: 4px;
+}
+
+.hero {
+	min-height: 680px;
+	display: flex;
+	align-items: center;
+	padding: 70px max(25px, calc((100% - 1150px) / 2));
+	background: linear-gradient(90deg, #000b, #0002),
+		url('https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=1600&q=80')
+			center / cover;
+	color: #fff;
+}
+
+.hero h2 {
+	font-size: clamp(48px, 8vw, 85px);
+	line-height: 0.98;
+	margin: 15px 0;
+}
+
+.hero h2 span {
+	font-weight: 400;
+}
+
+.hero p {
+	max-width: 530px;
+	margin-bottom: 25px;
+}
+
+.tag {
+	font-size: 12px;
+	letter-spacing: 3px;
+	font-weight: bold;
+}
+
+.section {
+	max-width: 1150px;
+	margin: auto;
+	padding: 90px 25px;
+}
+
+.heading {
+	display: flex;
+	justify-content: space-between;
+	align-items: end;
+	margin-bottom: 35px;
+}
+
+.heading h2 {
+	font-size: 42px;
+}
+
+.heading a {
+	color: #111;
+}
+
+.products {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 25px;
+}
+
+.products article {
+	border: 1px solid #eee;
+}
+
+.photo {
+	height: 330px;
+	background: linear-gradient(135deg, #ddd, #999);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 34px;
+	letter-spacing: 5px;
+	font-weight: bold;
+}
+
+.second {
+	background: linear-gradient(135deg, #ddd, #bbb);
+}
+
+.third {
+	background: linear-gradient(135deg, #bbb, #777);
+}
+
+.info {
+	padding: 22px;
+}
+
+.info small {
+	color: #777;
+	letter-spacing: 2px;
+}
+
+.info h3 {
+	margin: 7px 0 10px;
+	font-size: 20px;
+}
+
+.info strong {
+	font-size: 20px;
+	display: block;
+	margin-bottom: 15px;
+}
+
+.smallbtn {
+	padding: 9px 15px;
+	font-size: 13px;
+}
+
+.about {
+	padding: 100px max(25px, calc((100% - 1150px) / 2));
+	background: #111;
+	color: #fff;
+}
+
+.about h2 {
+	font-size: 55px;
+	max-width: 700px;
+	margin: 10px 0;
+}
+
+.about p:last-child {
+	max-width: 600px;
+	color: #bbb;
+}
+
+.contact {
+	text-align: center;
+}
+
+.contact h2 {
+	font-size: 45px;
+	margin: 8px 0 15px;
+}
+
+.contact p {
+	margin-bottom: 25px;
+}
+
+footer {
+	text-align: center;
+	padding: 25px;
+	background: #f5f5f5;
+	color: #666;
+}
+
+@media (max-width: 700px) {
+	.links {
+		display: none;
+	}
+
+	.products {
+		grid-template-columns: 1fr;
+	}
+
+	.heading {
+		align-items: start;
+		gap: 15px;
+		flex-direction: column;
+	}
+
+	.heading h2,
+	.contact h2 {
+		font-size: 35px;
+	}
+
+	.hero {
+		min-height: 580px;
+	}
+
+	.section {
+		padding: 65px 20px;
+	}
+
+	.about h2 {
+		font-size: 40px;
+	}
+}
